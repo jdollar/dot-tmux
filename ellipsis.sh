@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
 pkg.link() {
-  fs.link_file tmux.conf
+  case $(os.platform) in
+    osx)
+      fs.link_files tmux.conf
+      ;;
+  esac
 }
 
 pkg.pull() {
