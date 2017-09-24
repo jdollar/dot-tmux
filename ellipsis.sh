@@ -3,7 +3,7 @@
 pkg.link() {
   case $(os.platform) in
     osx)
-      fs.link_files tmux.conf
+      fs.link_files platforms/osx
       ;;
   esac
 }
